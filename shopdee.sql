@@ -31,7 +31,7 @@ CREATE TABLE `chat` (
   `sender` enum('c','e') NOT NULL,
   `orderID` int unsigned DEFAULT NULL,
   PRIMARY KEY (`msgID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `chat` (
 
 LOCK TABLES `chat` WRITE;
 /*!40000 ALTER TABLE `chat` DISABLE KEYS */;
-INSERT INTO `chat` VALUES (1,'Hi','2023-07-09 13:53:43',1,5,'c',1),(2,'Hi, how about you?','2023-07-15 17:28:03',1,5,'e',1);
+INSERT INTO `chat` VALUES (1,'Hi','2023-07-09 13:53:43',1,5,'c',1),(2,'Hi, how about you?','2023-07-15 17:28:03',1,5,'e',1),(3,'hello','2024-09-24 00:26:52',11,1,'c',1),(4,'Can I help you?','2024-09-24 00:43:41',11,1,'e',1),(5,'What wrong?','2024-09-24 00:45:27',11,1,'e',1),(6,'Payment is not complete','2024-09-24 00:46:27',11,1,'c',1),(7,'hello','2024-09-25 13:50:44',1,10,'c',4),(8,'What wrong?','2024-09-25 13:57:02',1,10,'e',4),(9,'hello','2024-09-26 10:20:34',1,2,'c',6),(10,'What worng???','2024-09-26 10:27:07',1,2,'e',6),(11,'product is not working.','2024-09-26 10:37:39',1,2,'c',6);
 /*!40000 ALTER TABLE `chat` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +99,7 @@ CREATE TABLE `customer` (
   PRIMARY KEY (`custID`),
   KEY `customer_1_idx` (`subdistrictID`),
   CONSTRAINT `customer_1` FOREIGN KEY (`subdistrictID`) REFERENCES `subdistrict` (`subdistrictID`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -108,7 +108,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES (1,'nadech','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','ณเดช','ชัยเจริญ','45/2 หมู่ที่ 2 ถนนรามอินทา','100201','10800','0908786237','029676543','2000-08-12',0,'nadech@gmail.com','img1.jpg',0,NULL,1),(2,'wirath','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','วิรัตน์','ใจซื่อ','56/2 ถนนพญาไท แขวงจตุจักร เขตจตุจักร','100107',NULL,'0898763723','','2001-06-02',0,'wirath@hotmail.com','img2.jpg',0,NULL,1),(3,'wipada','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','วิภาดา','มิมมานห์','61/7','141201',NULL,'0862134496','','1999-07-12',1,'wipada@gmail.com','img3.jpg',0,NULL,1),(4,'wichuda','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','วิชุดา','วิชเดช','12','141201',NULL,'0868927364','','1987-01-24',1,'wichuda@gmail.com','img4.jpg',0,NULL,1),(5,'sutsapda','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','สุดสัปดาห์','วิมารดร','72','141201',NULL,'0893524367','','1985-07-25',1,'sutsapda@hotmail.com','img5.jpg',0,NULL,0),(6,'suthikamol','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','สุทธิกมล','พรพิมาศ','85','130201',NULL,'0896789076','','2001-02-14',1,'suthikamol@hotmail.com','img6.jpg',0,NULL,1),(7,'sutket','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','สุดเขต','พิสุธิสาร','79/9','130204',NULL,'0897658261','','2000-12-05',0,'sutket@gmail.com','img7.jpg',0,NULL,0),(8,'phichet','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','พิเชษ','วิรการ','99/1','100201',NULL,'0897622817','','2002-11-07',0,'phichet@gmail.com','img8.jpg',0,NULL,1),(9,'pirath','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','ไพรัตน์','พรณรงค์','49/5','100201',NULL,'0869838484','','2001-07-05',0,'pirath@gmail.com','img9.jpg',0,NULL,1),(10,'wichatchan','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','วิชาติชาญ','ใจซื่อสัตย์','122','100201',NULL,'0897652875','','2000-12-01',0,'wichatchan@gmail.com','img10.jpg',0,NULL,1);
+INSERT INTO `customer` VALUES (1,'nadech','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','ณเดช','ชัยเจริญ','45/2 หมู่ที่ 2 ถนนรามอินทา','100201','10800','0908786237','029676543','2000-08-12',0,'nadech@gmail.com','img1.jpg',0,NULL,1),(2,'wirath','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','วิรัตน์','ใจซื่อ','56/2 ถนนพญาไท แขวงจตุจักร เขตจตุจักร','100107',NULL,'0898763723','','2001-06-02',0,'wirath@hotmail.com','img2.jpg',0,NULL,1),(3,'wipada','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','วิภาดา','มิมมานห์','61/7','141201',NULL,'0862134496','','1999-07-12',1,'wipada@gmail.com','img3.jpg',0,NULL,1),(4,'wichuda','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','วิชุดา','วิชเดช','12','141201',NULL,'0868927364','','1987-01-24',1,'wichuda@gmail.com','img4.jpg',0,NULL,1),(5,'sutsapda','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','สุดสัปดาห์','วิมารดร','72','141201',NULL,'0893524367','','1985-07-25',1,'sutsapda@hotmail.com','img5.jpg',0,NULL,0),(6,'suthikamol','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','สุทธิกมล','พรพิมาศ','85','130201',NULL,'0896789076','','2001-02-14',1,'suthikamol@hotmail.com','img6.jpg',0,NULL,1),(7,'sutket','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','สุดเขต','พิสุธิสาร','79/9','130204',NULL,'0897658261','','2000-12-05',0,'sutket@gmail.com','img7.jpg',0,NULL,0),(8,'phichet','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','พิเชษ','วิรการ','99/1','100201',NULL,'0897622817','','2002-11-07',0,'phichet@gmail.com','img8.jpg',0,NULL,1),(9,'pirath','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','ไพรัตน์','พรณรงค์','49/5','100201',NULL,'0869838484','','2001-07-05',0,'pirath@gmail.com','img9.jpg',0,NULL,1),(10,'wichatchan','$2a$10$9PA9zeFRXx1U1zSnhODMw..X87PmIqN8axlC6JaP0fhxEO8OYN3Ti','วิชาติชาญ','ใจซื่อสัตย์','122','100201',NULL,'0897652875','','2000-12-01',0,'wichatchan@gmail.com','img10.jpg',0,NULL,1),(11,'somsak','$2a$10$s44P8Q5./x4PBGhQjlZUBuDVJ7GLfEQ7hl23cTw6BM08PoMwl5mVa','สมศักดิ์','ใจดี',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'img11.jpg',0,NULL,1),(16,'test1','$2a$10$w/BXSQOInbB/fdcD4/Ei1ulQwJ9WnsylUrstcrYofzlsEcmUpj5h.','test1','test1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,1);
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,6 +202,7 @@ CREATE TABLE `orderdetail` (
 
 LOCK TABLES `orderdetail` WRITE;
 /*!40000 ALTER TABLE `orderdetail` DISABLE KEYS */;
+INSERT INTO `orderdetail` VALUES (1,3,2,500.00),(1,4,3,400.00),(1,5,2,200.00),(2,6,2,350.00),(2,1,1,250.00),(3,3,1,500.00),(3,4,2,400.00),(4,3,3,500.00),(4,6,2,350.00),(5,3,1,500.00),(5,7,1,1200.00),(6,5,3,200.00),(6,3,2,500.00),(7,3,5,500.00),(7,5,4,200.00);
 /*!40000 ALTER TABLE `orderdetail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -224,7 +225,7 @@ CREATE TABLE `orders` (
   KEY `statusID` (`statusID`),
   CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`custID`) REFERENCES `customer` (`custID`),
   CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`statusID`) REFERENCES `orderstatus` (`statusID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -233,6 +234,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,11,'2024-09-23 23:34:34',NULL,NULL,3),(2,11,'2024-09-24 00:51:57',NULL,NULL,2),(3,11,NULL,NULL,NULL,0),(4,1,'2024-09-25 13:45:34',NULL,NULL,3),(5,1,'2024-09-25 15:30:56',NULL,NULL,3),(6,1,'2024-09-26 10:14:04',NULL,NULL,3),(7,2,'2024-09-27 11:03:52',NULL,NULL,2);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -280,7 +282,7 @@ CREATE TABLE `payment` (
   KEY `order_ibfk_2_idx` (`orderID`),
   CONSTRAINT `order_ibfk_2` FOREIGN KEY (`orderID`) REFERENCES `orders` (`orderID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `payment_ibfk_2` FOREIGN KEY (`channelID`) REFERENCES `paymentchannel` (`channelID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -289,6 +291,7 @@ CREATE TABLE `payment` (
 
 LOCK TABLES `payment` WRITE;
 /*!40000 ALTER TABLE `payment` DISABLE KEYS */;
+INSERT INTO `payment` VALUES (1,1,'2024-09-23 23:42:10',2600.00,NULL,'1727109703955_croppedImg1727109730105.jpg',1),(2,2,'2024-09-24 00:52:34',950.00,NULL,'1727113933592_croppedImg1727113954734.jpg',1),(3,4,'2024-09-25 13:46:04',2200.00,NULL,'1727246752113_croppedImg1727246764167.jpg',1),(4,5,'2024-09-25 15:52:07',1700.00,NULL,'1727254272522_croppedImg1727254327505.jpg',1),(5,6,'2024-09-26 10:17:14',1600.00,NULL,'1727320620374_croppedImg1727320634160.jpg',1),(6,7,'2024-09-27 11:04:35',3300.00,NULL,'1727409869335_croppedImg1727409875152.jpg',1);
 /*!40000 ALTER TABLE `payment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -458,4 +461,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-20 10:16:01
+-- Dump completed on 2024-09-27 11:26:09
